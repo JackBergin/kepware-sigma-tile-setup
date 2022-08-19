@@ -47,7 +47,7 @@ def update_sensor_datastore(sense, context, vibrationQueue): # Updates the senso
     while (True):
        	newValues = []
 
-        newValues.extend(float_to_uint16(sense.temperature))
+        newValues.extend(float_to_uint16((32+1.8*sense.temperature)))
     	newValues.extend(float_to_uint16(sense.humidity))
     	newValues.extend(float_to_uint16(sense.pressure))
 
@@ -99,14 +99,14 @@ def display_manager(sense, context, IP_Address):
         e,e,y,y,y,y,e,e,
         ]
     image_running = [
-        e,e,g,g,g,g,e,e,
-        e,g,g,g,g,g,g,e,
-        g,g,g,g,g,w,g,g,
-        g,g,g,g,w,g,g,g,
-        g,w,g,g,w,g,g,g,
-        g,g,w,w,g,g,g,g,
-        e,g,g,w,g,g,g,e,
-        e,e,g,g,g,g,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
         ]
     image_plannedDowntime = [
         e,e,b,b,b,b,e,e,
@@ -139,14 +139,14 @@ def display_manager(sense, context, IP_Address):
         e,e,w,w,w,w,e,e,
         ]
     image_notconfigured = [
-        e,e,w,w,w,w,e,e,
-        e,w,w,w,w,w,w,e,
-        w,w,w,w,w,w,w,w,
-        w,w,w,w,w,w,w,w,
-        w,w,w,w,w,w,w,w,
-        w,w,w,w,w,w,w,w,
-        e,w,w,w,w,w,w,e,
-        e,e,w,w,w,w,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
+        e,e,e,e,e,e,e,e,
         ]
 
     previousValues = 100
