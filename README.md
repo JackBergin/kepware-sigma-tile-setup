@@ -1,5 +1,9 @@
 # SigmaTile and Kepware Setup
-## Overview:
+
+## Repository Statement of Purpose
+This repository goes over connecting an IoT device to PTC's Kepware and ThingWorx through modbus TCP protocal. In this example the device in question is a RaspberryPI (versions 3 and 4) and a Sense Hat sheild being used for Temperature, Humidity, Pressure, and Acceleration readings. For quick implementation, follow the setup instructions below closely. 
+
+## Repository Overview
 In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "SigmaTile_Case_STLS", and "Kepware_OPF_Instance". The first two folders contain the necessary scripts for setting up the RaspberryPi for outputting data to Kepware via pymodbus. The third folder, "SigmaTile_Case_STLs", contains the STL files for printing the RaspberryPi 3 and RaspberryPi 4 cases (top case is the same for both). The final folder contains the .OPF file which one will open with Kepware in order to create the necessary links to the RaspberryPis. 
 
 ## Folder Breakdown
