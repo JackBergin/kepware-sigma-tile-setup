@@ -3,22 +3,38 @@
 In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "SigmaTile_Case_STLS", and "Kepware_OPF_Instance". The first two folders contain the necessary scripts for setting up the RaspberryPi for outputting data to Kepware via pymodbus. The third folder, "SigmaTile_Case_STLs", contains the STL files for printing the RaspberryPi 3 and RaspberryPi 4 cases (top case is the same for both). The final folder contains the .OPF file which one will open with Kepware in order to create the necessary links to the RaspberryPis. 
 
 ## Folder Breakdown
-"past-mfg-tile"         
-    - "SigmaTile_SenseHat_V5.py": The primary python script.
-    - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
-    - "launcher.sh": Launcher file.
-"recent-mfg-tile"   
-    - "get-pip.py": The pip installer for the corresponding python script version.    
-    - "SigmaTile_SenseHat_V6.py": The primary python script.
-    - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
-    - "launcher.sh": Launcher file.
-"SigmaTile_Case_STLS"   
-    - "Bottom_Casing_PI3.stl": Bottom casing for PI3
-    - "Bottom_Casing_PI4.stl": Bottom casing for PI4
-    - "Top_Casing_PI3_PI4.stl": Top casing for the PI3 and PI4
-    - "Vuforia_Assembly.stl": Used within AR Experience
-        - All of these can be printed on Enders, Ultimakers, MarkedForged, and FormLab printers. *If using FormLabs, print with Durable or Tough resin types.
+
+    "past-mfg-tile"         
+
+        - "SigmaTile_SenseHat_V5.py": The primary python script.
+        
+        - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
+        
+        - "launcher.sh": Launcher file.
+
+    "recent-mfg-tile"   
+
+        - "get-pip.py": The pip installer for the corresponding python script version.  
+        
+        - "SigmaTile_SenseHat_V6.py": The primary python script.
+        
+        - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
+        
+        - "launcher.sh": Launcher file.
+
+    "SigmaTile_Case_STLS"   
+
+        - "Bottom_Casing_PI3.stl": Bottom casing for PI3
+        
+        - "Bottom_Casing_PI4.stl": Bottom casing for PI4
+        
+        - "Top_Casing_PI3_PI4.stl": Top casing for the PI3 and PI4
+        
+        - "Vuforia_Assembly.stl": Used within AR Experience
+
+
 "Kepware_OPF_Instance" 
+
     - Contains the .opf file for the Kepware setup of the Sigma Tile.
 
 ## Repository and Folder Setup 
