@@ -1,4 +1,4 @@
-# Kepware_SigmaTile_Setup
+# SigmaTile and Kepware Setup
 ## Overview:
 In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "SigmaTile_Case_STLS", and "Kepware_OPF_Instance". The first two folders contain the necessary scripts for setting up the RaspberryPi for outputting data to Kepware via pymodbus. The third folder, "SigmaTile_Case_STLs", contains the STL files for printing the RaspberryPi 3 and RaspberryPi 4 cases (top case is the same for both). The final folder contains the .OPF file which one will open with Kepware in order to create the necessary links to the RaspberryPis. 
 
@@ -106,5 +106,20 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         - Once complete, the RasperryPi has been fully set up.
         
 ## Setup For Kepware - Kepware_OPF_Instance (Easiest Part)
+
     Step I) Open Kepware
-    Step II) Navigate to  
+    Step II) Navigate to file
+    Step III) Select open, choose the OPF, and then open
+    Step IV) Create more or delete devices
+        - To make more right click the channel, copy, right click the project, press paste
+        - To delete, right click the channel, press delete
+    Step V) Configure the IP address to each device under each channel
+        - First, navigate to the channel, left click on it and then select the device. 
+        - Right click on the device, go down to the bottom of the tab and click properties.
+        - From there edit, the IP address listed to match the one displayed on the SigmaTile
+        - This is also where you can edit the device's name
+        
+    Now you're all set up with Kepware and the Sigma Tile if all of the steps were followed correcly!
+    
+
+# Kepware to ThingWorx Setup
