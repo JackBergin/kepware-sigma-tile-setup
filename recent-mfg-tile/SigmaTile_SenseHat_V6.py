@@ -1,4 +1,7 @@
-#!/usr/bin/env python
+#!/usr/bin/python3
+
+import sys
+sys.path.append("home/pi/.local/lib/python3.9/site-packages")
 
 #---------------------------------------------------------------------------#
 # Import Packages and Functions
