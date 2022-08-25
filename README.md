@@ -29,6 +29,7 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         - Contains the .opf file for the Kepware setup of the Sigma Tile.
 
 ## Repository and Folder Setup 
+
     I) Clone repo to RaspberryPi instance and Kepware instance
 
     Following Steps for RaspberryPi Repo Setup:
@@ -42,6 +43,7 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         III) Move .opf file to desired location
 
 ## Setup For Raspberry Pi - past-mfg-tile
+
     Step I) Once the folder has been moved and renamed with the steps above:
     
         - Open terminal and execute command: "$ cd mfg-tile"
@@ -62,13 +64,47 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         - Once complete, the RasperryPi has been fully set up.
 
 ## Setup For Raspberry Pi - current-mfg-tile
-Step I) Once the folder has been moved and renamed with the steps above
 
-## Setup For Kepware - Kepware_OPF_Instance
-Step I) Open Kepware
-Step II) Navigate to  
+    Step I) Once the folder has been moved and renamed with the steps above:
+    
+        - Open terminal and execute command: "$ cd mfg-tile"
+        - Next, open the mfg-folder, and then open the launcher.sh file. Modify the path to the python script to match yours.
+        - Now go back to terminal and make the "launcher.sh" executable with this command: sudo chmod +x launcher.sh
+        - Next, make the "SigmaTile_SenseHat_V6.py" executable with this command: sudo chmod +x SigmaTile_SenseHat_V5.py
+        - Finally, make the "get-pip.py" executable with this command: sudo chmod +x get-pip.py
 
-Clone this to the RaspberryPi environment and run the install.sh file. If wanted to run on boot, make sure to configure the crontab file properly with the following command: sudo crontab -e. Once exectuing this command, choose nano as your preferred editor and then add the crontab line from the mfg-tile folder to the last line in the nano editor. Once completed, log into kepware, open up the opf file and then change the ip address linked under Channel1 to match the sigma tile's (listed upon execution of the main python script). To execute the Sigma Tile's main script navigate to the mfg-tile folder within the raspberry pi's terminal using cd. type the command "sudo python &lt;pythonfFile.py> and the IP address will be listed. Once this is completed, the sigma tile is connected to kepware. 
+    Step II) Configure python instance with proper packages
+    
+        - Open terminal adn install twister along with pymodbus using: 
+            - pip3 install pymodbus
+            - pip3 install twister
+        - If these are installed within a separate path more setup is required parts of the "SigmaTile_SenseHat_V6.py" script
+            - There are two ways to check:
+            - The first is upon install of the above libraries, you will have a warning messae giving you a separate diectory for install.
+            - If this is not visible and you are still unsure, stay in terminal and execute the following commands:
+                - python3
+                - import sys
+                - sys.path
+            - If your "site-packages" path is not in path with the python interpreter then we can add it to the "SigmaTile_SenseHat_V6.py" script
+            - Click on the "SigmaTile_SenseHat_V6.py" to edit
+                - You will notice these commands at the top of the script:
+                    - import sys
+                    - sys.path.append("pathToPython/site-packages")
+                - Change the path to match your directory to site-packages and save the script before closing.
+         - Now the Python script should run.
 
-Connecting Kepware to Thingworx is the next step in order to create a GUI and Mashup for visualizing the data output from the Sigma Tile. The following link teaches the basics on connecting Kepware to Thingworx and takes very little time to get set up.
-https://developer.thingworx.com/en/resources/guides/connect-kepware-server-thingworx-guide
+    Step III) Execution upon RaspberryPI boot:
+        
+        *** If you would like for your RaspberryPi to autorun the above scripts upon boot, then follow these steps. If no then the setup is complete.
+    
+        - Pull up terminal to edit crontab (the startup execution script) with the following command: sudo crontab -e
+        - Select option 1 to edit in nano
+        - Open the mfg-tile folder and open the "mycron.tab" file.
+        - Correct the directory of the launcher.sh file accordingly and then copy this line.
+        - Past this line into the terminal at the very last line of crontab.
+        - Hit ctrl-x to save and enter to exit
+        - Once complete, the RasperryPi has been fully set up.
+        
+## Setup For Kepware - Kepware_OPF_Instance (Easiest Part)
+    Step I) Open Kepware
+    Step II) Navigate to  
