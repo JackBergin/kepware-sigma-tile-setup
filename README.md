@@ -128,6 +128,7 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
     Step II) Left click on "properties", left click on the last selection; "ThingWorx"
     Step III) Proceed to the following image
    ![Screen Shot 2022-08-25 at 12 18 19 PM](https://user-images.githubusercontent.com/81708456/186717496-c2a7d106-39c0-45f4-aa22-be92072ce5d1.png)
+       
         4) In the Property Editor pop-up, click ThingWorx.
         5) In the Enable field, select Yes from the drop-down.
         6) In the Host field, enter the URL or IP address of your ThingWorx Foundation server, Do not enter http:// 
