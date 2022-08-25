@@ -20,11 +20,8 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
     "SigmaTile_Case_STLS"   
 
         - "Bottom_Casing_PI3.stl": Bottom casing for PI3
-        
         - "Bottom_Casing_PI4.stl": Bottom casing for PI4
-        
         - "Top_Casing_PI3_PI4.stl": Top casing for the PI3 and PI4
-        
         - "Vuforia_Assembly.stl": Used within AR Experience
 
     "Kepware_OPF_Instance" 
@@ -32,25 +29,37 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         - Contains the .opf file for the Kepware setup of the Sigma Tile.
 
 ## Repository and Folder Setup 
-I) Clone repo to RaspberryPi instance and Kepware instance
+    I) Clone repo to RaspberryPi instance and Kepware instance
 
-Following Steps for RaspberryPi Repo Setup:
-II) If on old or new RaspberryPi OS, move "past-mfg-tile" or "current-mfg-tile" to "home/{yourUserDirectory}"
-III) Rename folder to mfg-tile
+    Following Steps for RaspberryPi Repo Setup:
+    
+        II) If on old or new RaspberryPi OS, move "past-mfg-tile" or "current-mfg-tile" to "home/{yourUserDirectory}"
+        III) Rename folder to mfg-tile
 
-Folloing Steps for Kepware Repo Setup:
-II) Go into "Kepware_OPF_Instance"
-III) Move .opf file to desired location
+    Folloing Steps for Kepware Repo Setup:
+    
+        II) Go into "Kepware_OPF_Instance"
+        III) Move .opf file to desired location
 
 ## Setup For Raspberry Pi - past-mfg-tile
-Step I) Once the folder has been moved and renamed with the steps above:
-    -  Open terminal and execute command: "$ cd mfg-tile"
-    - Next, open the mfg-folder, and then open the launcher.sh file. Modify the path to the python script to match yours.
-    - Now go back to terminal and make the "launcher.sh" executable with this command: sudo chmod +x launcher.sh
-    - Next, make the "SigmaTile_SenseHat_V5.py" executable with this command: sudo chmod +x SigmaTile_SenseHat_V5.py
-Step II) Execution upon RaspberryPI boot:
-*** If you would like for your RaspberryPi to autorun the above scripts upon boot, then follow these steps. If no then the setup is complete.
-    - 
+    Step I) Once the folder has been moved and renamed with the steps above:
+    
+        - Open terminal and execute command: "$ cd mfg-tile"
+        - Next, open the mfg-folder, and then open the launcher.sh file. Modify the path to the python script to match yours.
+        - Now go back to terminal and make the "launcher.sh" executable with this command: sudo chmod +x launcher.sh
+        - Next, make the "SigmaTile_SenseHat_V5.py" executable with this command: sudo chmod +x SigmaTile_SenseHat_V5.py
+        
+    Step II) Execution upon RaspberryPI boot:
+        
+        *** If you would like for your RaspberryPi to autorun the above scripts upon boot, then follow these steps. If no then the setup is complete.
+    
+        - Pull up terminal to edit crontab (the startup execution script) with the following command: sudo crontab -e
+        - Select option 1 to edit in nano
+        - Open the mfg-tile folder and open the "mycron.tab" file.
+        - Correct the directory of the launcher.sh file accordingly and then copy this line.
+        - Past this line into the terminal at the very last line of crontab.
+        - Hit ctrl-x to save and enter to exit
+        - Once complete, the RasperryPi has been fully set up.
 
 ## Setup For Raspberry Pi - current-mfg-tile
 Step I) Once the folder has been moved and renamed with the steps above
