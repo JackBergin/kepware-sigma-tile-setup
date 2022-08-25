@@ -30,17 +30,17 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
 
 ## Repository and Folder Setup 
 
-    I) Clone repo to RaspberryPi instance and Kepware instance
+    Step I) Clone repo to RaspberryPi instance and Kepware instance
 
     Following Steps for RaspberryPi Repo Setup:
     
-        II) If on old or new RaspberryPi OS, move "past-mfg-tile" or "current-mfg-tile" to "home/{yourUserDirectory}"
-        III) Rename folder to mfg-tile
+        Step II-a)  If on old or new RaspberryPi OS, move "past-mfg-tile" or "current-mfg-tile" to "home/{yourUserDirectory}"
+        Step III-a) Rename folder to mfg-tile
 
     Folloing Steps for Kepware Repo Setup:
     
-        II) Go into "Kepware_OPF_Instance"
-        III) Move .opf file to desired location
+        Step II-b)  Go into "Kepware_OPF_Instance"
+        Step III-b) Move .opf file to desired location
 
 ## Setup For Raspberry Pi - past-mfg-tile
 
@@ -123,3 +123,9 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
     
 
 # Kepware to ThingWorx Setup
+
+    Step I) Open Kepware
+    Step II) Right click on the Project within the Kepware .opf
+    Step III) Left click on "properties"
+    Step IV) Left click on the last selection; "ThingWorx"
+    Step V) ![Screen Shot 2022-08-25 at 12 18 19 PM](https://user-images.githubusercontent.com/81708456/186717496-c2a7d106-39c0-45f4-aa22-be92072ce5d1.png)
