@@ -7,19 +7,14 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
     "past-mfg-tile"         
 
         - "SigmaTile_SenseHat_V5.py": The primary python script.
-        
         - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
-        
         - "launcher.sh": Launcher file.
 
     "recent-mfg-tile"   
 
         - "get-pip.py": The pip installer for the corresponding python script version.  
-        
         - "SigmaTile_SenseHat_V6.py": The primary python script.
-        
         - "mycron.tab": Crontab instance for execution of launch file upon boot of the RaspberryPi.
-        
         - "launcher.sh": Launcher file.
 
     "SigmaTile_Case_STLS"   
@@ -32,10 +27,9 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
         
         - "Vuforia_Assembly.stl": Used within AR Experience
 
+    "Kepware_OPF_Instance" 
 
-"Kepware_OPF_Instance" 
-
-    - Contains the .opf file for the Kepware setup of the Sigma Tile.
+        - Contains the .opf file for the Kepware setup of the Sigma Tile.
 
 ## Repository and Folder Setup 
 I) Clone repo to RaspberryPi instance and Kepware instance
