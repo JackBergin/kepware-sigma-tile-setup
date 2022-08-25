@@ -124,9 +124,19 @@ In this repository, there are 4 folders; "past-mfg-tile", "recent-mfg-tile", "Si
 
 # Kepware to ThingWorx Setup
 
-    Step I) Open Kepware
-    Step II) Right click on the Project within the Kepware .opf
-    Step III) Left click on "properties"
-    Step IV) Left click on the last selection; "ThingWorx"
-    Step V) 
+    Step I) Open Kepware and right click on the Project within the Kepware .opf
+    Step II) Left click on "properties", left click on the last selection; "ThingWorx"
+    Step III) Proceed to the following image
    ![Screen Shot 2022-08-25 at 12 18 19 PM](https://user-images.githubusercontent.com/81708456/186717496-c2a7d106-39c0-45f4-aa22-be92072ce5d1.png)
+        4) In the Property Editor pop-up, click ThingWorx.
+        5) In the Enable field, select Yes from the drop-down.
+        6) In the Host field, enter the URL or IP address of your ThingWorx Foundation server, Do not enter http:// 
+        7) Enter the Port number. If you are using the "hosted" Developer Portal trial, enter 443.
+        8) In the Application Key field, copy and paste the Application Key you created in ThingWorx (if not created go make one!). 
+        9) In the Trust self-signed certificates field, select Yes from the drop-down. 
+        10) In the Trust all certificates field, select Yes from the drop-down. 
+        11) In the Disable encryption field, select No from the drop-down if you are using a secure port. Select Yes if you are using an http port. 
+        12) Type IndConn_Server in the Thing name field, including matching capitalization. 
+        13) If you are connecting with a remote instance of ThingWorx Foundation and expect breaks or latency in connection, enable Store and Forward. 
+        14) Left click "Apply" in the pop-up.
+        15) Left click "Ok", and now you have Kepware connected to ThingWorx
